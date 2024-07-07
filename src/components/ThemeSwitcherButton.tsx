@@ -15,7 +15,8 @@ export const ThemeSwitcherButton = () => {
   if(!mounted) return null
 
   return (
-    <button className="hover:bg-[#000] hover:text-white dark:hover:bg-white dark:hover:text-black p-2 rounded-full transition duration-150 ease-linear" onClick={()=> setTheme(theme==="light" ? "dark" : "light")}>
+    <button className="hover:bg-[#000] hover:text-white dark:hover:bg-white dark:hover:text-black p-2 rounded-full transition duration-150 ease-linear" 
+      onClick={()=> setTheme(theme==="light" ? "dark" : "light")}>
       {theme==="light" ? <Moon/> : <Sun/>}
     </button>
   )
