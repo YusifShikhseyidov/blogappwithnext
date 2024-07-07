@@ -1,14 +1,14 @@
-export interface Posts{
+export interface Post{
   title: "string";
   slug: {current: "string"};
   publishedAt: "string";
   excerpt: "string";
   body: any;
-  tags: Array<Tags>;
+  tags: Array<Tag>;
   _id: 'string';
 }
 
-export interface Tags{
+export interface Tag{
   name: 'string',
   slug: {current: 'string'};
   _id: 'string';

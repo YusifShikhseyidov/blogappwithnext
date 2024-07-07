@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import {client} from "../../../sanity/lib/client"
-import { Posts } from "@/utils/PostsInterface";
+import { Post } from "@/utils/PostsInterface";
 import PostComponent from "@/components/PostComponent";
 
 async function getPosts(){
@@ -18,8 +18,7 @@ async function getPosts(){
 }
 
 export default async function Home() {
-  const posts: Posts[]= await getPosts()
-  console.log(posts)
+  const posts: Post[]= await getPosts()
   return (
     <div className="flex min-h-screen flex-col items-start justify-start py-16">
       <Header title='Posts'/>
