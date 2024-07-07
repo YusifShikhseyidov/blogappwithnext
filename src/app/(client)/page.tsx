@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import {client} from "../../../sanity/lib/client"
 import { Posts } from "@/utils/PostsInterface";
+import PostComponent from "@/components/PostComponent";
 
 async function getPosts(){
   const query = `
@@ -23,8 +24,8 @@ export default async function Home() {
     <div className="flex min-h-screen flex-col items-start justify-start py-16">
       <Header title='Posts'/>
       <div>
-        {posts?.length>0 && posts?.map(post=>(
-          <p key={post.title}>{post.title}</p>
+        {posts?.length > 0 && posts?.map(post=>(
+          <PostComponent post={post} key={post.slug.current} />
         ))}
       </div>
     </div>
